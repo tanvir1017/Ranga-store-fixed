@@ -8,9 +8,13 @@
   <title>Commando Store</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" /> -->
 
+    <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- bootstrap cdn link -->
+    
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,14 +28,6 @@
 <body>
   <header></header>
   <main class="main">
-    <!-- <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()" >
-          <i class="fas fa-search"></i>
-        </button>
-      </div> -->
       <div class="input-groups mb-3 w-50 mx-auto ">
           <input
             id="input-field"
@@ -43,8 +39,16 @@
           <img src="images/loupe.svg"  id="search-btn" onclick="loadProducts()" class="img-fluid images" id="search-btn" />
         </div>
     </div>
+    <!-- show details -->
+   <!--  <div class="row details-on-ui row-cols-2 w-50 h-100 mx-auto">
+  </div> -->
+  </div>
+   
+   
+  </div>
+    <!-- show details -->
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
+      <div class="col-md-9 col-lg-9 col-sm-7 g-4">
         <div id="all-products" class="">
           <!-- <h1></h1> -->
         </div>
@@ -94,7 +98,7 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-outline-secondary text-center text-bold">Buy Now</button>
           </div>
         </div>
       </div>
