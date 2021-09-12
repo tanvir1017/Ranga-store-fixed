@@ -111,17 +111,35 @@ body {
         /* margin-left: -60px; */
         cursor: pointer;
       }
+      .images2 {
+        margin-top: 25px;
+        width: 50px;
+        border: 3px solid black;
+        border-radius: 100px;
+        position: relative;
+        cursor: pointer;
+      }
+      .shopping-cart{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+      }
       i{
         color: #6b6b6b;
       }
-      /* .show-details-img{
+      .show-details-img{
         width: 50% !important;
         margin: auto;
-      } */
+      }
       /* .cart-main{
-        top: 100;
+        top: 1000;
         right: 0;
         left: 900;
         z-index: 1030;
         position: fixed;
       } */
+      .cart-icon{
+        color: white;
+      }

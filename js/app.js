@@ -1,9 +1,3 @@
-const price = document.getElementById('price').innerText;
-const pirceValue = parseFloat(price);
-const dCrg = document.getElementById('delivery-charge').innerText;
-const dCrgValue = parseFloat(dCrg);
-const tax = document.getElementById('total-tax').innerText;
-const taxValue = parseFloat(tax);
 
 const loadProducts = () => {
   // const url = `https://fakestoreapi.com/products`;
@@ -18,10 +12,11 @@ loadProducts();
 const showDeatils = id => {
   fetch(`https://fakestoreapi.com/products/${id}`)
             .then(res=>res.json())
-            .then(data=>showDeatilsUi(data))
+            .then(data =>showDeatilsUi(data))
   
 }
-/* const showDeatilsUi = detail => {
+const showDeatilsUi = detail => {
+   console.log(detail)
     const img = detail.image;
     const titles = detail.title.slice(0, 20)
   const description = detail.description.slice(0, 200)
@@ -41,14 +36,17 @@ const showDeatils = id => {
         <span class="me-3"><i class="fas fa-grin-stars"></i> ${detail.rating.rate}</span>   <span>${detail.rating.count} <i class="fas fa-user"></i> </span>
       </p>
         <p class="card-text mt-3 text-muted">${description}</p>
-      </div>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"">
+        <i class="fas fa-shopping-cart cart-icon"></i> Your Cart
+      </button>
+        </div>
     </div>
   </div>
   
   `
   details.appendChild(div)
   }
-// show product details in UI  */
+// show product details in UI 
 
 // show all product in UI 
 const showProducts = (products) => {
@@ -120,14 +118,12 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
+  updateTotal()
 };
 
 //grandTotal update function
 const updateTotal = () => {
-   /*  const grandTotal = getInputValue.parseFloat(("price")) + getInputValue.parseFloat(("delivery-charge")) +
-    getInputValue.parseFloat(("total-tax")); */
-    // document.getElementById("total").innerText = grandTotal;
+    const grandTotal = getInputValue("price") + getInputValue("delivery-charge") +
+    getInputValue("total-tax");
+    document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
-
-let grandTotal = pirceValue + dCrgValue + taxValue;
-const total = document.getElementById('total').innerText = grandTotal
