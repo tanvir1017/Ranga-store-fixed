@@ -37,13 +37,10 @@
             placeholder="Search anything from fashion"
           />
           <img src="images/loupe.svg"  id="search-btn" onclick="loadProducts()" class="img-fluid images" id="search-btn" />
-          <a id="search-btn" class="images2" id="search-btn" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" ><i class="fas fa-shopping-cart shopping-cart"></i></a>
+          <a id="search-btn" class="images2" id="search-btn" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" ><i class="fas fa-arrow-circle-left shopping-cart"></i></a>
         </div>
     </div>
-    <!-- show details -->
-    <div class="row details-on-ui row-cols-2 w-50 h-100 mx-auto">
-  </div>
-    <!-- show details -->
+
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7 g-4">
         <div id="all-products" class="">
@@ -103,9 +100,9 @@
   
 
         <!-- see my cart -->
-<!--       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        Button with data-bs-target
-      </button> -->
+      <!--       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              Button with data-bs-target
+            </button> -->
 
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
@@ -113,55 +110,10 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-      <div class="cart" id="my-cart">
-          <table class="table">
-            <thead>
-              <h1>My-Cart</h1>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Total Added-Products:</th>
-                <td><span id="total-Products">$ 0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Price:</th>
-                <td>$ <span id="price">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Total-Tax:</th>
-                <td>$ <span id="total-tax">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="parces text-center">
-            <button class="btn btn-outline-secondary text-center text-bold">Buy Now</button>
-          </div>
-        </div> 
-      </div>
+          <!-- show details -->
+          <div class="row details-on-ui row-cols-1 h-100 mx-auto">
+           </div>
+    <!-- show details -->
         </div>
       </div>
         <!-- see my cart -->

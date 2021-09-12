@@ -36,9 +36,6 @@ const showDeatilsUi = detail => {
         <span class="me-3"><i class="fas fa-grin-stars"></i> ${detail.rating.rate}</span>   <span>${detail.rating.count} <i class="fas fa-user"></i> </span>
       </p>
         <p class="card-text mt-3 text-muted">${description}</p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"">
-        <i class="fas fa-shopping-cart cart-icon"></i> Your Cart
-      </button>
         </div>
     </div>
   </div>
@@ -70,7 +67,7 @@ const showProducts = (products) => {
 
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary">add to cart</button>
-      <button id="details-btn" onclick="showDeatils('${product.id}')" class="btn btn-dark">Details</button></div>
+      <button id="details-btn" class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"  onclick="showDeatils('${product.id}')" class="btn btn-dark">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
