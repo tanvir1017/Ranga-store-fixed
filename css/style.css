@@ -23,7 +23,7 @@ body {
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
-  margin-left: 20px;
+  margin-left: 51px;
 }
 #all-products {
   display: grid;
@@ -84,3 +84,27 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.input-groups {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+      }
+      .inputs {
+        border-radius: 100px;
+        padding: 10px 25px;
+        /* background-color: black; */
+        color: black;
+        border: 3px solid black;
+        outline: none;
+        margin-top: 25px;
+      }
+      .images {
+        margin-top: 25px;
+        width: 50px;
+        background-color: black;
+        border-radius: 100px;
+        padding: 10px;
+        /* margin-left: -60px; */
+        cursor: pointer;
+      }

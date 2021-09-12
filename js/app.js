@@ -1,7 +1,15 @@
+const price = document.getElementById('price').innerText;
+const pirceValue = parseFloat(price);
+const dCrg = document.getElementById('delivery-charge').innerText;
+const dCrgValue = parseFloat(dCrg);
+const tax = document.getElementById('total-tax').innerText;
+const taxValue = parseFloat(tax);
+
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
+  // const url = `https://fakestoreapi.com/products`;
+  const url = 'http://127.0.0.1:5500/db.json'
   fetch(url)
-    .then((response) => response.json())
+    .then((res) => res.json())
     .then((data) => showProducts(data));
 };
 loadProducts();
@@ -9,9 +17,10 @@ loadProducts();
 // show all product in UI 
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
+  console.log(allProducts)
   for (const product of allProducts) {
-    console.log(product.price)
-    const image = product.images;
+    const image = product.image;
+    console.log(image)
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
@@ -52,7 +61,7 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = parseFloat(value).toFixed(2);
 };
 
 // update delivery charge and total Tax
@@ -74,8 +83,10 @@ const updateTaxAndCharge = () => {
 
 //grandTotal update function
 const updateTotal = () => {
-  const grandTotal =
-    getInputValue("price") + getInputValue("delivery-charge") +
-    getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+   /*  const grandTotal = getInputValue.parseFloat(("price")) + getInputValue.parseFloat(("delivery-charge")) +
+    getInputValue.parseFloat(("total-tax")); */
+    // document.getElementById("total").innerText = grandTotal;
 };
+
+let grandTotal = pirceValue + dCrgValue + taxValue;
+const total = document.getElementById('total').innerText = grandTotal

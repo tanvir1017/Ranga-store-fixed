@@ -15,19 +15,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- fotnAwsome cdn link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <!-- fotnAwsome cdn link -->
 </head>
 
 <body>
   <header></header>
   <main class="main">
-    <div class="search-field">
+    <!-- <div class="search-field">
       <div class="search-box">
         <input id="input-field" class="search-field" type="text" />
         <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
+          autocomplete="off" id="search-btn" onclick="loadProducts()" >
+          <i class="fas fa-search"></i>
         </button>
-      </div>
+      </div> -->
+      <div class="input-groups mb-3 w-50 mx-auto ">
+          <input
+            id="input-field"
+            type="text"
+            class="inputs"
+            size="40"
+            placeholder="Search anything from fashion"
+          />
+          <img src="images/loupe.svg"  id="search-btn" onclick="loadProducts()" class="img-fluid images" id="search-btn" />
+        </div>
     </div>
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
