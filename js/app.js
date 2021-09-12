@@ -1,4 +1,4 @@
-
+// load data from db.josn fil
 const loadProducts = () => {
   // const url = `https://fakestoreapi.com/products`;
   const url = 'http://127.0.0.1:5500/db.json'
@@ -15,6 +15,8 @@ const showDeatils = id => {
             .then(data =>showDeatilsUi(data))
   
 }
+
+// Showing products details on ui offcanvas
 const showDeatilsUi = detail => {
    console.log(detail)
     const img = detail.image;
@@ -42,7 +44,7 @@ const showDeatilsUi = detail => {
   
   `
   details.appendChild(div)
-  }
+}
 // show product details in UI 
 
 // show all product in UI 
@@ -54,6 +56,8 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.classList.add("h-100");
+
+    // update every single product on the UI  
     div.innerHTML = `<div class="single-product h-100">
       <div>
     <img class="product-image" src=${image}></img>
@@ -69,9 +73,12 @@ const showProducts = (products) => {
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary">add to cart</button>
       <button id="details-btn" class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"  onclick="showDeatils('${product.id}')" class="btn btn-dark">Details</button></div>
       `;
+    
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// product number update on the cart
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
