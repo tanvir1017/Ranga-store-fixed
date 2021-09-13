@@ -1,7 +1,7 @@
 // load data from db.josn fil
 const loadProducts = () => {
   // const url = `https://fakestoreapi.com/products`;
-  const url = 'http://127.0.0.1:5500/db.json'
+  const url = 'db.json'
   fetch(url)
     .then((res) => res.json())
     .then((data) => showProducts(data));
